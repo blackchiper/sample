@@ -210,3 +210,15 @@ CREATE TABLE store (
   CONSTRAINT fk_store_address FOREIGN KEY (address_id) REFERENCES address (address_id) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+create table job_offers(
+  role VARCHAR(40),
+  location VARCHAR(20),
+  level VARCHAR(20),
+  salary int
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table employee_occupation(
+  name VARCHAR(50),
+  role VARCHAR(40),
+  location VARCHAR(20)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
